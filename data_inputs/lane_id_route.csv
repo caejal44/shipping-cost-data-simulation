@@ -1,0 +1,151 @@
+﻿lane_id,origin_warehouse,destination_store,miles
+1,Warehouse_MIA,Store_1_San Francisco,3043
+2,Warehouse_MIA,Store_2_Atlanta,664
+3,Warehouse_MIA,Store_3_Houston,1189
+4,Warehouse_MIA,Store_4_Seattle,3300
+5,Warehouse_MIA,Store_5_Dallas,1312
+6,Warehouse_MIA,Store_6_New York,1283
+7,Warehouse_MIA,Store_7_Portland,3263
+8,Warehouse_MIA,Store_8_Detroit,1387
+9,Warehouse_MIA,Store_9_Chicago,1381
+10,Warehouse_MIA,Store_10_Boston,1494
+11,Warehouse_MIA,Store_11_Phoenix,2362
+12,Warehouse_MIA,Store_12_Miami,5
+13,Warehouse_MIA,Store_13_Minneapolis,1794
+14,Warehouse_MIA,Store_14_Los Angeles,2735
+15,Warehouse_MIA,Store_15_Denver,2069
+16,Warehouse_LA,Store_1_San Francisco,381
+17,Warehouse_LA,Store_2_Atlanta,2174
+18,Warehouse_LA,Store_3_Houston,1547
+19,Warehouse_LA,Store_4_Seattle,1135
+20,Warehouse_LA,Store_5_Dallas,1436
+21,Warehouse_LA,Store_6_New York,2789
+22,Warehouse_LA,Store_7_Portland,962
+23,Warehouse_LA,Store_8_Detroit,2281
+24,Warehouse_LA,Store_9_Chicago,2016
+25,Warehouse_LA,Store_10_Boston,2982
+26,Warehouse_LA,Store_11_Phoenix,373
+27,Warehouse_LA,Store_12_Miami,2735
+28,Warehouse_LA,Store_13_Minneapolis,1853
+29,Warehouse_LA,Store_14_Los Angeles,23
+30,Warehouse_LA,Store_15_Denver,1016
+31,Warehouse_BOS,Store_1_San Francisco,3094
+32,Warehouse_BOS,Store_2_Atlanta,1080
+33,Warehouse_BOS,Store_3_Houston,1847
+34,Warehouse_BOS,Store_4_Seattle,3044
+35,Warehouse_BOS,Store_5_Dallas,1767
+36,Warehouse_BOS,Store_6_New York,214
+37,Warehouse_BOS,Store_7_Portland,3086
+38,Warehouse_BOS,Store_8_Detroit,706
+39,Warehouse_BOS,Store_9_Chicago,983
+40,Warehouse_BOS,Store_10_Boston,12
+41,Warehouse_BOS,Store_11_Phoenix,2647
+42,Warehouse_BOS,Store_12_Miami,1497
+43,Warehouse_BOS,Store_13_Minneapolis,1390
+44,Warehouse_BOS,Store_14_Los Angeles,2982
+45,Warehouse_BOS,Store_15_Denver,1969
+46,Warehouse_SF,Store_1_San Francisco,10
+47,Warehouse_SF,Store_2_Atlanta,3043
+48,Warehouse_SF,Store_3_Houston,1928
+49,Warehouse_SF,Store_4_Seattle,808
+50,Warehouse_SF,Store_5_Dallas,1731
+51,Warehouse_SF,Store_6_New York,2906
+52,Warehouse_SF,Store_7_Portland,635
+53,Warehouse_SF,Store_8_Detroit,2398
+54,Warehouse_SF,Store_9_Chicago,2132
+55,Warehouse_SF,Store_10_Boston,3099
+56,Warehouse_SF,Store_11_Phoenix,754
+57,Warehouse_SF,Store_12_Miami,3042
+58,Warehouse_SF,Store_13_Minneapolis,1977
+59,Warehouse_SF,Store_14_Los Angeles,383
+60,Warehouse_SF,Store_15_Denver,1252
+61,Warehouse_ATL,Store_1_San Francisco,2480
+62,Warehouse_ATL,Store_2_Atlanta,18
+63,Warehouse_ATL,Store_3_Houston,793
+64,Warehouse_ATL,Store_4_Seattle,2637
+65,Warehouse_ATL,Store_5_Dallas,783
+66,Warehouse_ATL,Store_6_New York,863
+67,Warehouse_ATL,Store_7_Portland,2600
+68,Warehouse_ATL,Store_8_Detroit,723
+69,Warehouse_ATL,Store_9_Chicago,717
+70,Warehouse_ATL,Store_10_Boston,1075
+71,Warehouse_ATL,Store_11_Phoenix,1813
+72,Warehouse_ATL,Store_12_Miami,665
+73,Warehouse_ATL,Store_13_Minneapolis,1131
+74,Warehouse_ATL,Store_14_Los Angeles,2182
+75,Warehouse_ATL,Store_15_Denver,1405
+76,Warehouse_CHI,Store_1_San Francisco,2128
+77,Warehouse_CHI,Store_2_Atlanta,716
+78,Warehouse_CHI,Store_3_Houston,1084
+79,Warehouse_CHI,Store_4_Seattle,2063
+80,Warehouse_CHI,Store_5_Dallas,926
+81,Warehouse_CHI,Store_6_New York,790
+82,Warehouse_CHI,Store_7_Portland,2120
+83,Warehouse_CHI,Store_8_Detroit,284
+84,Warehouse_CHI,Store_9_Chicago,21
+85,Warehouse_CHI,Store_10_Boston,983
+86,Warehouse_CHI,Store_11_Phoenix,1753
+87,Warehouse_CHI,Store_12_Miami,1381
+88,Warehouse_CHI,Store_13_Minneapolis,408
+89,Warehouse_CHI,Store_14_Los Angeles,2015
+90,Warehouse_CHI,Store_15_Denver,1002
+91,Warehouse_HOU,Store_1_San Francisco,1927
+92,Warehouse_HOU,Store_2_Atlanta,793
+93,Warehouse_HOU,Store_3_Houston,13
+94,Warehouse_HOU,Store_4_Seattle,2335
+95,Warehouse_HOU,Store_5_Dallas,239
+96,Warehouse_HOU,Store_6_New York,1629
+97,Warehouse_HOU,Store_7_Portland,2272
+98,Warehouse_HOU,Store_8_Detroit,1302
+99,Warehouse_HOU,Store_9_Chicago,1084
+100,Warehouse_HOU,Store_10_Boston,1840
+101,Warehouse_HOU,Store_11_Phoenix,1176
+102,Warehouse_HOU,Store_12_Miami,1189
+103,Warehouse_HOU,Store_13_Minneapolis,1178
+104,Warehouse_HOU,Store_14_Los Angeles,1548
+105,Warehouse_HOU,Store_15_Denver,1031
+106,Warehouse_SEA,Store_1_San Francisco,808
+107,Warehouse_SEA,Store_2_Atlanta,2635
+108,Warehouse_SEA,Store_3_Houston,2335
+109,Warehouse_SEA,Store_4_Seattle,20
+110,Warehouse_SEA,Store_5_Dallas,2101
+111,Warehouse_SEA,Store_6_New York,2852
+112,Warehouse_SEA,Store_7_Portland,174
+113,Warehouse_SEA,Store_8_Detroit,2345
+114,Warehouse_SEA,Store_9_Chicago,2063
+115,Warehouse_SEA,Store_10_Boston,3045
+116,Warehouse_SEA,Store_11_Phoenix,1416
+117,Warehouse_SEA,Store_12_Miami,3300
+118,Warehouse_SEA,Store_13_Minneapolis,1656
+119,Warehouse_SEA,Store_14_Los Angeles,1136
+120,Warehouse_SEA,Store_15_Denver,1305
+121,Warehouse_NYC,Store_1_San Francisco,2902
+122,Warehouse_NYC,Store_2_Atlanta,866
+123,Warehouse_NYC,Store_3_Houston,1627
+124,Warehouse_NYC,Store_4_Seattle,2852
+125,Warehouse_NYC,Store_5_Dallas,1547
+126,Warehouse_NYC,Store_6_New York,7
+127,Warehouse_NYC,Store_7_Portland,2894
+128,Warehouse_NYC,Store_8_Detroit,615
+129,Warehouse_NYC,Store_9_Chicago,790
+130,Warehouse_NYC,Store_10_Boston,214
+131,Warehouse_NYC,Store_11_Phoenix,2406
+132,Warehouse_NYC,Store_12_Miami,1284
+133,Warehouse_NYC,Store_13_Minneapolis,1197
+134,Warehouse_NYC,Store_14_Los Angeles,2790
+135,Warehouse_NYC,Store_15_Denver,1776
+136,Warehouse_DEN,Store_1_San Francisco,1252
+137,Warehouse_DEN,Store_2_Atlanta,1404
+138,Warehouse_DEN,Store_3_Houston,1031
+139,Warehouse_DEN,Store_4_Seattle,1307
+140,Warehouse_DEN,Store_5_Dallas,797
+141,Warehouse_DEN,Store_6_New York,1779
+142,Warehouse_DEN,Store_7_Portland,1243
+143,Warehouse_DEN,Store_8_Detroit,1271
+144,Warehouse_DEN,Store_9_Chicago,1005
+145,Warehouse_DEN,Store_10_Boston,1971
+146,Warehouse_DEN,Store_11_Phoenix,864
+147,Warehouse_DEN,Store_12_Miami,2068
+148,Warehouse_DEN,Store_13_Minneapolis,842
+149,Warehouse_DEN,Store_14_Los Angeles,1017
+150,Warehouse_DEN,Store_15_Denver,11
