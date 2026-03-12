@@ -12,19 +12,21 @@ The final dataset contains ~100,000 simulated shipments across multiple warehous
 
 Each shipment record includes:
 
-| Column            | Description                                      |
-| ----------------- | ------------------------------------------------ |
-| shipment_id       | Unique shipment identifier                       |
-| carrier           | Carrier responsible for shipment                 |
-| origin_warehouse  | Shipping warehouse                               |
-| destination_store | Destination store                                |
-| ship_date         | Date shipment departed                           |
-| delivery_date     | Date shipment delivered                          |
-| status            | Delivery status (Delivered / Missing / Returned) |
-| weight            | Shipment weight (kg)                             |
-| cost              | Final shipment cost                              |
-| miles             | Distance between origin and destination          |
-| transit_days      | Days required for delivery                       |
+| Column               | Description                                                            |
+| -------------------- | ---------------------------------------------------------------------- |
+| **Shipment_ID**      | Unique identifier for each shipment                                    |
+| **Origin_Warehouse** | Warehouse location where the shipment originated                       |
+| **Destination**      | Destination retail store                                               |
+| **Carrier**          | Shipping carrier responsible for the shipment                          |
+| **Service**          | Service level selected for the shipment (Standard, Express, Expedited) |
+| **Status**           | Final shipment status (Delivered, Missing, Returned)                   |
+| **Shipment_Date**    | Date the shipment left the warehouse                                   |
+| **Delivery_Date**    | Date the shipment was delivered (if delivered)                         |
+| **Weight_kg**        | Weight of the shipment in kilograms                                    |
+| **Transit_Days**     | Number of days the shipment was in transit                             |
+| **Distance_miles**   | Distance between origin and destination                                |
+| **Cost**             | Total shipping cost calculated by the pricing model                    |
+
 
 **Simulation Design**
 
