@@ -15,7 +15,7 @@ def prepare_for_export(shipment_df: pd.DataFrame, carrier_df: pd.DataFrame) -> p
                  "weight", "transit_days", "miles", "cost", "lane_id", "carrier_id"]
     shipment_df_copy = shipment_df_copy[new_order]
     shipment_df_copy.drop(columns=["lane_id","carrier_id"], inplace=True)
-    shipment_df_copy.rename(columns={"shipment_id": "Shipment_Id",
+    shipment_df_copy = shipment_df_copy.rename(columns={"shipment_id": "Shipment_Id",
                                      "origin_warehouse": "Origin_Warehouse",
                                      "destination_store": "Destination",
                                      "carrier": "Carrier",
