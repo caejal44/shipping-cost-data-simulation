@@ -134,6 +134,20 @@ Transit Days
 75% → 5 days
 95% → 8 days
 
+**Example Visualizations**
+
+These quick visualizations demonstrate the realism of the generated dataset.
+
+Cost Distribution
+
+![Cost Distribution](docs/cost_distribution.png)
+
+Transit time vs Distance
+
+![Transit vs Distance](docs/transit_vs_miles.png)
+
+Transit time increases with distance as expected in real logistics networks.
+
 **Project Structure**
 
 data_inputs/
