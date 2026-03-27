@@ -34,5 +34,5 @@ def export_shipment_csv(shipment_df):
     """export shipment_dataframe to csv"""
     BASE_DIR = pathlib.Path(__file__).resolve().parent.parent
     DATA_PATH = BASE_DIR / "data_outputs"
-    file_name = "logistics_shipment_dataset.csv"
+    file_name = "logistics_shipments_dataset.csv"
     shipment_df.to_csv(DATA_PATH / file_name, index=False)
