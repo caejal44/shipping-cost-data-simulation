@@ -1,6 +1,6 @@
-**Shipping Cost Dataset Simulation**
+# Shipping Cost Dataset Simulation
 
-**Overview**
+## Overview
 
 This project generates a synthetic freight shipment dataset designed to simulate realistic logistics network behavior. The dataset models warehouse-to-store shipping activity including carrier selection, transit times, pricing, and delivery outcomes.
 
@@ -8,17 +8,19 @@ The generator was built to create a realistic training dataset for machine learn
 
 The final dataset contains ~100,000 simulated shipments across multiple warehouses, carriers, and destination stores.
 
-**Dataset Features**
+---
+
+## Dataset Features
 
 Each shipment record includes:
 
 | Column               | Description                                                            |
-| -------------------- | ---------------------------------------------------------------------- |
+|----------------------|------------------------------------------------------------------------|
 | **Shipment_ID**      | Unique identifier for each shipment                                    |
 | **Origin_Warehouse** | Warehouse location where the shipment originated                       |
 | **Destination**      | Destination retail store                                               |
 | **Carrier**          | Shipping carrier responsible for the shipment                          |
-| **Service**          | Service level selected for the shipment (Standard, Express, Expedited) |
+| **Service**          | Service level (Standard, Express, Expedited)                           |
 | **Status**           | Final shipment status (Delivered, Missing, Returned)                   |
 | **Shipment_Date**    | Date the shipment left the warehouse                                   |
 | **Delivery_Date**    | Date the shipment was delivered (if delivered)                         |
@@ -27,167 +29,193 @@ Each shipment record includes:
 | **Distance_miles**   | Distance between origin and destination                                |
 | **Cost**             | Total shipping cost calculated by the pricing model                    |
 
+---
 
-**Simulation Design**
+## Simulation Design
 
 The dataset is generated using a modular simulation engine.
 
-**Lane Network**
+### Lane Network
 
-- 150 warehouse-to-store shipping lanes
-- Each lane associated with mileage distance
-- All lanes guaranteed minimum shipment coverage
+- 150 warehouse-to-store shipping lanes  
+- Each lane associated with mileage distance  
+- All lanes guaranteed minimum shipment coverage  
 
-**Carrier Coverage**
+### Carrier Coverage
 
-- 7 simulated carriers
-- Each carrier supports a subset of lanes
-- Carrier usage distributed with realistic market share
+- 7 simulated carriers  
+- Each carrier supports a subset of lanes  
+- Carrier usage distributed with realistic market share  
 
-**Shipment Generation**
+### Shipment Generation
 
 Two phases of shipment creation:
 
-1) Floor Coverage
-   - Each lane-carrier pair repeated multiple times
-   - Ensures every valid route appears in the dataset
+**1. Floor Coverage**
+- Each lane-carrier pair repeated multiple times  
+- Ensures every valid route appears in the dataset  
 
-3)  Random Volume
-     - Additional shipments generated using weighted distance buckets
-     - Distance ranges influence lane selection probability
+**2. Random Volume**
+- Additional shipments generated using weighted distance buckets  
+- Distance ranges influence lane selection probability  
 
-**Pricing Model**
+---
+
+## Pricing Model
 
 Shipment pricing is calculated using:
 
+```
 Cost =
 ((Miles × Carrier Mile Rate) + (Weight × Carrier Weight Rate))
 × Service Multiplier
 × Fuel Rate
 × Random Price Variation
+```
 
-**Carrier-specific pricing tiers**
+### Carrier-Specific Pricing Tiers
 
 Rates vary by:
-- mileage tier
-- weight tier
-- service level
-- carrier fuel adjustment
+- mileage tier  
+- weight tier  
+- service level  
+- carrier fuel adjustment  
 
-**Random price variation**
+### Random Price Variation
 
 Each shipment includes a small pricing noise factor:
-±2% variation
 
-**Transit Time Model**
+- ±2% variation  
+
+---
+
+## Transit Time Model
 
 Transit days are determined using:
 
-- distance
-- service level
-- delivery status
+- distance  
+- service level  
+- delivery status  
 
-Delivered shipments receive calculated transit days while missing or returned shipments leave transit fields blank.
+Delivered shipments receive calculated transit days, while missing or returned shipments leave transit fields blank.
 
 Transit time increases smoothly with distance.
 
-**Delivery Outcomes**
+---
+
+## Delivery Outcomes
 
 Shipment status is sampled using realistic probabilities:
 
 | Status    | Approximate Rate |
-| --------- | ---------------- |
-| Delivered | ~96%             |
-| Missing   | ~3%              |
-| Returned  | ~1%              |
+|----------|------------------|
+| Delivered | ~96%            |
+| Missing   | ~3%             |
+| Returned  | ~1%             |
 
 Non-delivered shipments do not receive delivery dates or transit days.
 
-**Data Validation**
+---
+
+## Data Validation
 
 Quality checks ensure dataset integrity:
 
-- No negative shipment costs
-- No missing carrier assignments
-- Transit days increase with mileage
-- Expedited service only used for shorter routes
-- Delivery dates occur after shipment dates
-- Non-delivered shipments have blank delivery fields
+- No negative shipment costs  
+- No missing carrier assignments  
+- Transit days increase with mileage  
+- Expedited service only used for shorter routes  
+- Delivery dates occur after shipment dates  
+- Non-delivered shipments have blank delivery fields  
 
 Summary statistics are printed during generation.
 
-**Example Dataset Statistics**
+---
+
+## Example Dataset Statistics
 
 Example output from a generation run:
 
-Total shipments: ~101,000
+**Total shipments:** ~101,000  
 
-Cost Distribution
-5%   ≈ $214
-25%  ≈ $500
-50%  ≈ $711
-75%  ≈ $1097
-95%  ≈ $1983
+### Cost Distribution
+- 5%   ≈ $214  
+- 25%  ≈ $500  
+- 50%  ≈ $711  
+- 75%  ≈ $1097  
+- 95%  ≈ $1983  
 
-Transit Days
-5%  → 1 day
-25% → 2 days
-50% → 3 days
-75% → 5 days
-95% → 8 days
+### Transit Days
+- 5%  → 1 day  
+- 25% → 2 days  
+- 50% → 3 days  
+- 75% → 5 days  
+- 95% → 8 days  
 
-**Example Visualizations**
+---
 
-These quick visualizations demonstrate the realism of the generated dataset.
+## Example Visualizations
 
-Cost Distribution
+These visualizations demonstrate the realism of the generated dataset.
 
+### Cost Distribution
 ![Cost Distribution](docs/cost_distribution.png)
 
-Transit time vs Distance
-
+### Transit Time vs Distance
 ![Transit vs Distance](docs/transit_vs_miles.png)
 
 Transit time increases with distance as expected in real logistics networks.
 
-**Project Structure**
+---
 
+## Project Structure
+
+```
 data_inputs/
-- carrier_matrix.csv
-- carrier_route_matrix.csv
-- lane_id_route.csv
-- pricing.csv
+├── carrier_matrix.csv
+├── carrier_route_matrix.csv
+├── lane_id_route.csv
+├── pricing.csv
 
 data_outputs/
-- shipment_data.csv
+├── shipment_data.csv
 
 sim/
-- generate_dataset.py
-- loaders.py
-- pricing.py
-- sampling.py
-- transit.py
-- validation.py
-- export.py
-- lane_model.py
+├── generate_dataset.py
+├── loaders.py
+├── pricing.py
+├── sampling.py
+├── transit.py
+├── validation.py
+├── export.py
+├── lane_model.py
+```
 
-**How to Run**
+---
+
+## How to Run
 
 Generate the dataset:
 
-  python sim/generate_dataset.py
+```bash
+python sim/generate_dataset.py
+```
 
 The generated dataset will be saved to:
 
-  data_outputs/logistics_shipment_dataset.csv
+```bash
+data_outputs/logistics_shipments_dataset.csv
+```
 
-**Purpose**
+---
 
-This dataset generator was created to support projects involving:
+## Purpose
 
-- freight cost prediction
-- logistics analytics
-- machine learning model training
-- transportation network analysis
+This dataset generator was created to support:
+
+- freight cost prediction  
+- logistics analytics  
+- machine learning model training  
+- transportation network analysis  
 
 The simulation approach allows realistic data generation without exposing proprietary logistics datasets.
