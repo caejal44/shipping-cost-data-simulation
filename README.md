@@ -1,12 +1,16 @@
 # Shipping Cost Dataset Simulation
 
+Synthetic logistics dataset generator for multi-carrier shipping cost modeling and ML applications.
+
 ## Overview
 
 This project generates a synthetic freight shipment dataset designed to simulate realistic logistics network behavior. The dataset models warehouse-to-store shipping activity including carrier selection, transit times, pricing, and delivery outcomes.
 
 The generator was built to create a realistic training dataset for machine learning and analytics projects involving shipping cost prediction and logistics analysis.
 
-The final dataset contains ~100,000 simulated shipments across multiple warehouses, carriers, and destination stores.
+The dataset contains ~100,000 simulated shipments across multiple warehouses, carriers, and destination stores.
+
+Designed to support ML-based shipping cost prediction and serve as the data foundation for a multi-carrier decision-support application.
 
 ---
 
@@ -178,7 +182,7 @@ data_inputs/
 ├── pricing.csv
 
 data_outputs/
-├── shipment_data.csv
+├── logistics_shipments_dataset.csv
 
 sim/
 ├── generate_dataset.py
@@ -219,3 +223,11 @@ This dataset generator was created to support:
 - transportation network analysis  
 
 The simulation approach allows realistic data generation without exposing proprietary logistics datasets.
+
+## Related Project
+
+This dataset is used in the following application:
+
+👉 https://github.com/caejal44/shipping-cost-prediction
+
+The application uses this simulated dataset to train a machine learning model for multi-carrier cost prediction and decision support.
